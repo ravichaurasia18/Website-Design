@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register/Login Pages</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.12.0/bootstrap-social.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
+    <script src="https://cdn.rawgit.com/oauth-io/oauth-js/c5af4519/dist/oauth.js"></script>
+</head>
+<body>
+    <h1>Register / Login Page</h1>
+    <div class="myCard">
+        <div class="fixedCont">
+            <ul>
+                <li><a href="#" id="id1">Register Panel</a></li>
+                <li><a href="#" id="id2">Login Panel</a></li>
+                <li><a href="#" id="id4">Reset Password</a></li>
+            </ul>
+        </div>
+        <div class="panel">
+             <!-----container form registration-->
+            <form class="myPage ls" id="registerPanel">
+                <h2>Register</h2>
+                <input type="email" name="email" class ="lsGUI" placeholder="Email Id" required>
+                <input type="password" name="password" class ="lsGUI" placeholder="Password" required>
+                <select class="lsGUI lss" name="securityQA" required>
+                     <option value="default">Select Security Question</option>
+                     <option>What is your mother maiden name?</option>
+                     <option>What was your first car?</option>
+                     <option>What elementary school did you attend?</option>
+                </select>
+                <input type="text" name="question" class ="lsGUI" placeholder="Answer" required>
+                <input type="submit" name="register" value="Register" class="lsGUI lsbtn">
+            </form>
+              <!-----container form login-->
+              <form class="myPage" id="loginPanel">
+                <h2>Login</h2>
+                <input type="email" name="emailId" placeholder="Email Id" class ="lsGUI" required>
+                <input type="password" name="passwordse" placeholder="Password" class ="lsGUI" required>
+                <input type="submit" name="login" value ="Login" class="lsGUI lsbtn">
+              </form>
+              <!-----container form reset password-->
+              <form class="myPage" id="resetPanel">
+                <h2>Reset Password</h2>
+                <input type="email" name="emailchk" placeholder="Email Id" class ="lsGUI" required>
+                <input type="submit" name="emailvalid" value ="Email Check" class="lsGUI lsbtn lsbtn2">
+                <select class="lsGUI lss lschk" name="securitysQAA" required disabled>
+                    <option>Select Security Question</option>
+                    <option>What is your mother maiden name?</option>
+                    <option>What was your first car?</option>
+                    <option>What elementary school did you attend?</option>
+               </select>
+               <input type="text" name="securityAnss" placeholder="Security Answer" class ="lsGUI lschk" required disabled>
+               <input type="password" name="passwordsee" placeholder="Password" class ="lsGUI lschk" required disabled>
+               <input type="submit" name="resetPassword" value ="Reset Password" class="lsGUI lsbtn lsbtn3 lschk" disabled>
+            </form>
+        </div>
+        <div class="notification"> 
+             <h3 id="alert"></h3>
+        </div>
+</body>
+</html>
